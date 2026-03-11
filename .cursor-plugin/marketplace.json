@@ -1,0 +1,22 @@
+{
+  "name": "dipcode-marketplace",
+  "owner": {
+    "name": "Dipcode Team",
+    "email": "team@dipcode.com"
+  },
+  "metadata": {
+    "description": "A marketplace of plugins for AI-powered coding assistants"
+  },
+  "plugins": [
+    {
+      "name": "devkit",
+      "source": "devkit",
+      "description": "Dipcode developer toolkit — git commit conventions and GitLab MR comment utilities",
+      "version": "0.1.0",
+      "author": {
+        "name": "Dipcode Team",
+        "email": "team@dipcode.com"
+      }
+    }
+  ]
+}

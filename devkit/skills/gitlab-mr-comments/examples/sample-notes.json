@@ -1,0 +1,72 @@
+[
+  {
+    "discussion_id": "d001",
+    "author": "jdoe",
+    "date": "2024-03-10",
+    "body": "This MR looks good overall, but I have a few concerns about error handling in the auth module.",
+    "file": null,
+    "line_start": null,
+    "line_end": null,
+    "line_type": null,
+    "base_sha": null,
+    "head_sha": null,
+    "resolved": null,
+    "type": "comment"
+  },
+  {
+    "discussion_id": "d002",
+    "author": "jdoe",
+    "date": "2024-03-10",
+    "body": "This function doesn't handle the case where `token` is expired. Should add a check before proceeding.",
+    "file": "src/auth/token.py",
+    "line_start": 42,
+    "line_end": 44,
+    "line_type": "new",
+    "base_sha": "a1b2c3d",
+    "head_sha": "e4f5g6h",
+    "resolved": false,
+    "type": "diff"
+  },
+  {
+    "discussion_id": "d002",
+    "author": "asmith",
+    "date": "2024-03-10",
+    "body": "Good catch, I'll add a token expiry check.",
+    "file": "src/auth/token.py",
+    "line_start": 42,
+    "line_end": 44,
+    "line_type": "new",
+    "base_sha": "a1b2c3d",
+    "head_sha": "e4f5g6h",
+    "resolved": false,
+    "type": "diff"
+  },
+  {
+    "discussion_id": "d003",
+    "author": "bwong",
+    "date": "2024-03-11",
+    "body": "Consider using `logging.warning()` instead of `print()` here for production readiness.",
+    "file": "src/utils/logger.py",
+    "line_start": 18,
+    "line_end": 18,
+    "line_type": "new",
+    "base_sha": "a1b2c3d",
+    "head_sha": "e4f5g6h",
+    "resolved": true,
+    "type": "diff"
+  },
+  {
+    "discussion_id": "d004",
+    "author": "clee",
+    "date": "2024-03-11",
+    "body": "This validation logic was important — why was it removed?",
+    "file": "src/auth/validate.py",
+    "line_start": 15,
+    "line_end": 20,
+    "line_type": "old",
+    "base_sha": "a1b2c3d",
+    "head_sha": "e4f5g6h",
+    "resolved": false,
+    "type": "diff"
+  }
+]
