@@ -41,14 +41,39 @@ To auto-suggest the marketplace for your team, add to `.claude/settings.json`:
 
 ### Cursor
 
-**Public marketplace** — if published to [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), users can install plugins directly from Cursor's built-in marketplace UI.
+To add this as a team marketplace:
 
-**Private/team use** — clone the repo and symlink the plugin into your project:
+1. Navigate to **Dashboard → Settings → Plugins**
+2. In the **Team Marketplaces** section, select **Import**
+3. Enter the repository URL and proceed
+4. Review the parsed plugins and optionally configure Team Access groups
+5. Enter the marketplace name and description, then save
 
-```bash
-git clone git@git.eurotux.com:dipops/tools/agents-marketplace.git
-ln -s /absolute/path/to/agents-marketplace/devkit /your/project/.cursor/plugins/devkit
-```
+Once imported, plugins can be installed directly from the marketplace panel, scoped to individual projects or system-wide.
+
+## Plugin Prerequisites
+
+### devkit — gitlab-mr-comments
+
+The `gitlab-mr-comments` skill requires the following tools to be installed and available in your `PATH`:
+
+- **[python-gitlab](https://python-gitlab.readthedocs.io/)** — GitLab CLI (`gitlab` command):
+
+  ```shell
+  pip install python-gitlab
+  ```
+
+  Configure it via `~/.python-gitlab.cfg` or environment variables. See the [python-gitlab authentication docs](https://python-gitlab.readthedocs.io/en/stable/gl_objects/users.html) for details.
+
+- **[jq](https://jqlang.org/)** — JSON processor used to normalize the API output:
+
+  ```shell
+  # macOS
+  brew install jq
+
+  # Debian/Ubuntu
+  apt install jq
+  ```
 
 ## Contributing
 
