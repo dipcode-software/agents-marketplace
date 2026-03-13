@@ -18,7 +18,7 @@ Add and install from the marketplace:
 
 ```shell
 # Add the marketplace
-/plugin marketplace add git@git.eurotux.com:dipops/tools/agents-marketplace.git
+/plugin marketplace add git@github.com:dipcode-software/agents-marketplace.git
 
 # Install a plugin
 /plugin install devkit@dipcode-marketplace
@@ -32,7 +32,7 @@ To auto-suggest the marketplace for your team, add to `.claude/settings.json`:
     "dipcode-marketplace": {
       "source": {
         "source": "url",
-        "url": "git@git.eurotux.com:dipops/tools/agents-marketplace.git"
+        "url": "git@github.com:dipcode-software/agents-marketplace.git"
       }
     }
   }
