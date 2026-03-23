@@ -1,7 +1,7 @@
 {
   "name": "devkit",
   "version": "0.1.0",
-  "description": "Dipcode developer toolkit — git commit conventions and GitLab MR comment utilities",
+  "description": "Dipcode developer toolkit — git commit conventions, GitLab MR comment utilities, and dependency validation",
   "author": {
     "name": "Dipcode Team",
     "email": "team@dipcode.com"
